@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 py-4">
       <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-gray-600">
-        <p className="text-sm">2021 © Delta Digital.</p>
+        <p className="text-sm">2025 © Delta Digital.</p>
         <a href="#" className="text-sm hover:underline">
           Aviso de Privacidad
         </a>

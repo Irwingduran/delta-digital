@@ -2,7 +2,7 @@ import React from 'react';
 
 const teamMembers = [
   {
-    name: 'Juan Pérez',
+    name: 'Gerardo',
     role: 'CEO & Founder',
     image: 'https://via.placeholder.com/150',
     social: {
@@ -12,7 +12,7 @@ const teamMembers = [
     },
   },
   {
-    name: 'Ana Gómez',
+    name: 'Arturo Robles',
     role: 'CTO',
     image: 'https://via.placeholder.com/150',
     social: {
@@ -22,7 +22,7 @@ const teamMembers = [
     },
   },
   {
-    name: 'Carlos Ruiz',
+    name: 'Irwing Durán',
     role: 'Lead Developer',
     image: 'https://via.placeholder.com/150',
     social: {
@@ -32,7 +32,7 @@ const teamMembers = [
     },
   },
   {
-    name: 'María López',
+    name: 'Ilse',
     role: 'UI/UX Designer',
     image: 'https://via.placeholder.com/150',
     social: {
