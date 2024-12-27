@@ -2,14 +2,14 @@ import React from 'react';
 import { Globe, ArrowDown, MousePointer, Target, LineChart, Monitor } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="p-6">
-    <div className="mb-4">
-      <Icon className="w-8 h-8 text-gray-400" />
+  <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <div className="mb-4 flex justify-center">
+      <Icon className="w-12 h-12 text-gray-400 hover:text-blue-600 hover:scale-110 transition-transform duration-300" />
     </div>
-    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+    <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
       {title}
     </h3>
-    <p className="text-gray-600 leading-relaxed">
+    <p className="text-gray-600 leading-relaxed text-center">
       {description}
     </p>
   </div>
@@ -54,10 +54,8 @@ const WhyGoogleAds = () => {
       <div className="container mx-auto px-4">
         {/* Título de la sección */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-blue-600">
-            ¿PORQUÉ ANUNCIARME EN GOOGLE ADS?
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mt-2"></div>
+        <h2 className="text-blue-600 text-lg font-semibold mb-2">¿POR QUÉ ANUNCIARME EN GOOGLE ADS?</h2>
+         
         </div>
 
         {/* Texto destacado */}

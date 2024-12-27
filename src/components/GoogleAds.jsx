@@ -36,9 +36,17 @@ const GoogleAds = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center text-center">
-              <div className="h-32 w-32 flex items-center justify-center mb-4">
-                <img src={feature.image} alt={feature.title} className="h-full object-contain" />
+            <div 
+              key={feature.id} 
+              className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Imagen con efecto flotante */}
+              <div className="h-32 w-32 flex items-center justify-center mb-4 animate-float">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="h-full object-contain"
+                />
               </div>
               <h3 className="text-4xl font-bold text-blue-600 mb-2">{feature.id}.</h3>
               <h4 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h4>
