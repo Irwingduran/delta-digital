@@ -92,7 +92,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-gray-600 mt-6 text-xl font-medium py-4 italic"
           >
-            "LA DIFERENCIA DIGITAL QUE SE NOTA"
+            &quot;LA DIFERENCIA DIGITAL QUE SE NOTA&quot;
           </motion.p>
 
           <motion.div
