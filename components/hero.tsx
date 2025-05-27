@@ -70,7 +70,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <Image src="/portada_Delta.png" alt="Delta Logo" width={240} height={240} className="object-contain" />
+            <Image src="/portada_delta.png" alt="Delta Logo" width={240} height={240} className="object-contain" />
           </motion.div>
 
           <motion.h1
