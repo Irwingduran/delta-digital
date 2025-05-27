@@ -80,7 +80,7 @@ const ProjectShowcase = () => {
 
 
   // Abrir modal con detalles del proyecto
-  const openProjectDetails = (id: number) => {
+  const openProjectDetails = () => {
     setIsModalOpen(true)
   }
 
@@ -371,7 +371,7 @@ const ProjectShowcase = () => {
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
                 className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full cursor-pointer"
-                onClick={() => openProjectDetails(project.id)}
+                onClick={openProjectDetails}
               >
                 {/* Imagen del proyecto */}
                 <div className="relative h-48 overflow-hidden">
