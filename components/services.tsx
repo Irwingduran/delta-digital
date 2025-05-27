@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Target, Palette, Code, BarChart3, ArrowRight, CheckCircle, Globe, Zap, Users, TrendingUp } from "lucide-react"

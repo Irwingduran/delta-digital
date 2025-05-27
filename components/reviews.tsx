@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star, ChevronLeft, ChevronRight, Quote, Award, Filter, Grid, List } from 'lucide-react'
@@ -26,7 +26,7 @@ const Reviews = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos")
   const [filteredTestimonials, setFilteredTestimonials] = useState<Testimonial[]>([])
 
-  const testimonials: Testimonial[] = [
+  const testimonials: Testimonial[] = useMemo(() => ([ 
     {
       id: 1,
       img: "/images/clients/findoctor.png",
@@ -117,7 +117,7 @@ const Reviews = () => {
       avatar: "/avatars/golazo-avatar.jpg",
       location: "Ciudad de México",
     },
-  ]
+  ]), []); 
 
   const categories = ["Todos", "Google Ads", "SEO", "SEO Local", "Desarrollo Web"]
 

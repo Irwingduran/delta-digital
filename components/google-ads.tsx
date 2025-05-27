@@ -46,27 +46,9 @@ const features = [
 ]
 
 const GoogleAds = () => {
-  const [activeCard, setActiveCard] = useState<string | null>(null)
 
   // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
 
-  const cardVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 },
-    },
-  }
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50" id="google-ads">
