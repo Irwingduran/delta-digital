@@ -161,7 +161,7 @@ const ProjectShowcase = () => {
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [isModalOpen, filteredProjects.length])
+  }, [isModalOpen, filteredProjects.length, nextSlide, prevSlide])
 
   // Obtener el proyecto actual
   const currentProject = filteredProjects[activeIndex]

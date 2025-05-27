@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { Star, ChevronLeft, ChevronRight, Quote, Award, TrendingUp, Users, Filter, Grid, List } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight, Quote, Award, Filter, Grid, List } from 'lucide-react'
 
 type Testimonial = {
   id: number;
@@ -121,17 +121,6 @@ const Reviews = () => {
 
   const categories = ["Todos", "Google Ads", "SEO", "SEO Local", "Desarrollo Web"]
 
-  const reviewStats = {
-    totalReviews: testimonials.length,
-    averageRating: 5.0,
-    ratingDistribution: {
-      5: 100,
-      4: 0,
-      3: 0,
-      2: 0,
-      1: 0,
-    },
-  }
 
   // Filtrar testimonios por categoría
   useEffect(() => {
@@ -141,7 +130,7 @@ const Reviews = () => {
       setFilteredTestimonials(testimonials.filter((testimonial) => testimonial.category === selectedCategory))
     }
     setActiveIndex(0)
-  }, [selectedCategory])
+  }, [selectedCategory, testimonials])
 
   // Auto-play del carrusel
   useEffect(() => {
@@ -311,7 +300,7 @@ const Reviews = () => {
                           <Quote className="w-8 h-8 text-blue-500 mb-4 mx-auto lg:mx-0" />
 
                           <p className="text-gray-600 text-lg italic mb-6 leading-relaxed">
-                            "{filteredTestimonials[activeIndex].quote}"
+                            &quot;{filteredTestimonials[activeIndex].quote}&quot;
                           </p>
 
                           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -425,7 +414,7 @@ const Reviews = () => {
                   </div>
 
                   {/* Testimonio */}
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-4">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-4">&quot;{testimonial.quote}&quot;</p>
 
                   {/* Footer */}
                   <div className="border-t border-gray-100 pt-4">

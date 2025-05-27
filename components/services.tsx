@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 import { Target, Palette, Code, BarChart3, ArrowRight, CheckCircle, Globe, Zap, Users, TrendingUp } from "lucide-react"
 
 const Services = () => {
-  const [activeService, setActiveService] = useState<number | null>(null)
 
   const services = [
     {
@@ -153,8 +152,6 @@ const Services = () => {
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
               className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-              onMouseEnter={() => setActiveService(service.id)}
-              onMouseLeave={() => setActiveService(null)}
             >
               {/* Imagen del servicio */}
               <div className="relative h-64 overflow-hidden">

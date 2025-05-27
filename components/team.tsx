@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { Linkedin, Twitter, Mail, Award, Calendar, MapPin, Star, Users, TrendingUp, Target } from "lucide-react"
+import { Award, Calendar, MapPin, Star, Users, TrendingUp, Target } from "lucide-react"
 
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null)
