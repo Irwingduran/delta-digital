@@ -1,113 +1,48 @@
 "use client"
 
-import { useState, useRef, useEffect, useCallback } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Filter, ArrowUpRight, X } from "lucide-react"
 
 const projects = [
+    {
+        id: 1,
+        title: "Centro de Próstata",
+        category: "Desarrollo Web y Posicionamiento",
+        description:
+          "Desarrollamos un sitio web en inglés y español para Centro de Próstata, una clínica que busca expandir su alcance hacia más clientes potenciales e internacionales.",
+        image: "/cdp.png",
+        logo: "/cdp-logo.png",
+        results: {
+          leads: 350,
+          roi: "280%",
+          ctr: "3.9%",
+          conversionRate: "7.5%",
+        },
+        url: "https://www.centrodeprostata.com",
+        tags: ["Desarrollo Web", "Google Ads", "Analítica Web"],
+        color: "from-purple-500 to-indigo-500",
+      },
   {
-    id: 1,
-    title: "Findoctor",
-    category: "Marketing Digital",
+    id: 2,
+    title: "DeCreditScore",
+    category: "Landing Page",
     description:
-      "Campaña de Google Ads para directorio médico que generó más de 500 leads calificados en 3 meses, aumentando las consultas médicas en un 75%.",
-    image: "/images/clients/findoctor.png",
-    logo: "/images/clients/findoctor.png",
+      "Desarrollamos una landing page para DeCreditScore, una start-up que busca ser el primer filtro para brindarle a sus clientes créditos personalizado basado en su score dentro de la plataforma.",
+    image: "/dcs.png",
+    logo: "/dsc-logo.png",
     results: {
       leads: 500,
       roi: "320%",
       ctr: "4.8%",
       conversionRate: "8.2%",
     },
-    tags: ["Google Ads", "SEO", "Landing Page"],
+    url: "https://www.decreditscore.xyz",
+    tags: ["Landing Page"],
     color: "from-blue-500 to-cyan-400",
   },
-  {
-    id: 2,
-    title: "Nextor Móvil",
-    category: "Posicionamiento Web",
-    description:
-      "Estrategia integral de posicionamiento que incrementó el tráfico orgánico en un 150% y redujo el costo por adquisición en campañas de Google Ads.",
-    image: "/images/clients/nextor-web.png",
-    logo: "/images/clients/nextor-web.png",
-    results: {
-      leads: 350,
-      roi: "280%",
-      ctr: "3.9%",
-      conversionRate: "7.5%",
-    },
-    tags: ["SEO", "Google Ads", "Analítica Web"],
-    color: "from-purple-500 to-indigo-500",
-  },
-  {
-    id: 3,
-    title: "CCBH",
-    category: "Presencia Digital",
-    description:
-      "Optimización de presencia en Google para empresa de consumibles de impresoras, logrando posicionamiento en las primeras posiciones para keywords estratégicas.",
-    image: "/images/clients/ccbh-web.png",
-    logo: "/images/clients/ccbh-web.png",
-    results: {
-      leads: 200,
-      roi: "240%",
-      ctr: "3.2%",
-      conversionRate: "6.8%",
-    },
-    tags: ["Google My Business", "SEO Local", "Google Ads"],
-    color: "from-amber-500 to-orange-500",
-  },
-  {
-    id: 4,
-    title: "Arte41",
-    category: "SEO Local",
-    description:
-      "Optimización de Google Mi Negocio para estudio de arte, aumentando la visibilidad local y generando un 200% más de contactos directos con bajo presupuesto.",
-    image: "/images/clients/arte41-web.png",
-    logo: "/images/clients/arte41-web.png",
-    results: {
-      leads: 120,
-      roi: "310%",
-      ctr: "5.1%",
-      conversionRate: "9.3%",
-    },
-    tags: ["Google My Business", "SEO Local", "Contenido"],
-    color: "from-emerald-500 to-teal-500",
-  },
-  {
-    id: 5,
-    title: "Sabai Center",
-    category: "Campañas Digitales",
-    description:
-      "Campaña de Google Ads para spa que incrementó las reservas en un 85% y amplió su base de clientes con un retorno de inversión excepcional.",
-    image: "/images/clients/sabai-web.png",
-    logo: "/images/clients/sabai-web.png",
-    results: {
-      leads: 280,
-      roi: "290%",
-      ctr: "4.2%",
-      conversionRate: "7.8%",
-    },
-    tags: ["Google Ads", "Remarketing", "Analítica"],
-    color: "from-pink-500 to-rose-500",
-  },
-  {
-    id: 6,
-    title: "El Golazo",
-    category: "Marketing Digital",
-    description:
-      "Estrategia integral para taquería que redujo la dependencia de plataformas de delivery, aumentando los pedidos directos en un 120% a través de su sitio web.",
-    image: "/images/clients/golazo-web.png",
-    logo: "/images/clients/golazo-web.png",
-    results: {
-      leads: 420,
-      roi: "350%",
-      ctr: "4.7%",
-      conversionRate: "8.9%",
-    },
-    tags: ["Google Ads", "SEO Local", "Web"],
-    color: "from-red-500 to-orange-500",
-  },
+
 ]
 
 // Todas las categorías únicas
@@ -133,13 +68,13 @@ const ProjectShowcase = () => {
   }, [selectedCategory])
 
   // Navegación del carrusel
-  const nextSlide = useCallback(() => {
+  const nextSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex === filteredProjects.length - 1 ? 0 : prevIndex + 1))
-  }, [filteredProjects.length]);
+  }
 
-  const prevSlide = useCallback(() => {
+  const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? filteredProjects.length - 1 : prevIndex - 1))
-  }, [filteredProjects.length]);
+  }
 
   // Abrir modal con detalles del proyecto
   const openProjectDetails = (id: number) => {
@@ -364,10 +299,10 @@ const ProjectShowcase = () => {
                           </div>
 
                           <button
-                            onClick={() => openProjectDetails(currentProject.id)}
-                            className="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+                            onClick={() => window.open(currentProject.url)}
+                            className="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors cursor-pointer"
                           >
-                            Ver detalles completos
+                            Ir al sitio web
                             <ArrowUpRight className="ml-1 h-4 w-4" />
                           </button>
                         </div>
@@ -507,51 +442,7 @@ const ProjectShowcase = () => {
         )}
       </div>
 
-      {/* Modal de detalles del proyecto */}
-      <AnimatePresence>
-        {isModalOpen && selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-            onClick={() => setIsModalOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25 }}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Aquí iría el contenido detallado del proyecto */}
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-6">
-                  <h2 className="text-2xl font-bold text-gray-800">Detalles del proyecto</h2>
-                  <button
-                    onClick={() => setIsModalOpen(false)}
-                    className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-                  >
-                    <X className="h-5 w-5 text-gray-500" />
-                  </button>
-                </div>
 
-                <div className="space-y-6">
-                  <p className="text-gray-600">
-                    Aquí se mostrarían todos los detalles del proyecto, incluyendo objetivos, estrategia,
-                    implementación, resultados detallados, testimonios del cliente, etc.
-                  </p>
-                  <p className="text-gray-600">
-                    Este modal es un placeholder. En una implementación real, se cargarían los datos completos del
-                    proyecto seleccionado.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   )
 }

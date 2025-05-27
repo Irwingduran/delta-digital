@@ -17,9 +17,6 @@ const Team = () => {
       fullRole: "Chief Executive Officer & Founder",
       image: "/team/gerardo.jpg",
       bio: "Visionario líder con más de 10 años de experiencia en marketing digital. Especialista en estrategias de crecimiento y transformación digital para empresas.",
-      experience: "10+ años",
-      location: "Ciudad de México",
-      email: "gerardo@deltaconsultora.com",
       skills: ["Estrategia Digital", "Liderazgo", "Google Ads", "Análisis de Datos"],
       achievements: ["Google Ads Certified", "50+ Proyectos Exitosos", "Mentor Startup"],
       color: "from-blue-500 to-indigo-600",
@@ -32,9 +29,6 @@ const Team = () => {
       fullRole: "Chief Technology Officer",
       image: "/team/arturo.jpg",
       bio: "Experto en tecnología con amplia experiencia en desarrollo de soluciones web escalables y arquitectura de sistemas modernos.",
-      experience: "8+ años",
-      location: "Guadalajara",
-      email: "arturo@deltaconsultora.com",
       skills: ["Desarrollo Web", "Arquitectura", "DevOps", "Bases de Datos"],
       achievements: ["AWS Certified", "100+ Aplicaciones", "Tech Lead"],
       color: "from-emerald-500 to-teal-600",
@@ -44,14 +38,11 @@ const Team = () => {
       id: 3,
       name: "Irwing",
       role: "Lead Developer",
-      fullRole: "Senior Full-Stack Developer",
+      fullRole: "Full-Stack Developer",
       image: "/team/irwing.jpg",
       bio: "Desarrollador full-stack especializado en tecnologías modernas. Apasionado por crear experiencias web excepcionales y código limpio.",
-      experience: "6+ años",
-      location: "Monterrey",
-      email: "irwing@deltaconsultora.com",
-      skills: ["React", "Node.js", "TypeScript", "Next.js"],
-      achievements: ["React Expert", "Open Source", "Code Mentor"],
+      skills: ["Python", "React", "TypeScript", "Next.js"],
+      achievements: ["Hackathon Winner","React Expert", "Open Source", "Code Mentor"],
       color: "from-purple-500 to-violet-600",
     },
     {
@@ -61,9 +52,6 @@ const Team = () => {
       fullRole: "Senior UI/UX Designer",
       image: "/team/ilse.jpg",
       bio: "Diseñadora creativa enfocada en crear experiencias de usuario intuitivas y visualmente impactantes que convierten visitantes en clientes.",
-      experience: "5+ años",
-      location: "Ciudad de México",
-      email: "ilse@deltaconsultora.com",
       skills: ["UI Design", "UX Research", "Figma", "Prototyping"],
       achievements: ["Design Awards", "User Experience", "Brand Identity"],
       color: "from-pink-500 to-rose-600",
@@ -207,12 +195,7 @@ const Team = () => {
                   )}
                 </AnimatePresence>
 
-                {/* Badge de experiencia */}
-                <div className="absolute top-4 right-4">
-                  <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-full px-3 py-1">
-                    <span className="text-xs font-medium text-gray-700">{member.experience}</span>
-                  </div>
-                </div>
+              
               </div>
 
               {/* Información del miembro */}
@@ -220,10 +203,6 @@ const Team = () => {
                 <div className="text-center mb-4">
                   <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
                   <p className="text-gray-600 text-sm mb-2">{member.role}</p>
-                  <div className="flex items-center justify-center text-xs text-gray-500">
-                    <MapPin className="w-3 h-3 mr-1" />
-                    {member.location}
-                  </div>
                 </div>
 
                 {/* Skills principales */}
@@ -294,10 +273,6 @@ const Team = () => {
                       <div className="flex-1">
                         <h2 className="text-2xl font-bold text-gray-800 mb-1">{member.name}</h2>
                         <p className="text-gray-600 mb-2">{member.fullRole}</p>
-                        <div className="flex items-center text-sm text-gray-500 mb-3">
-                          <MapPin className="w-4 h-4 mr-1" />
-                          {member.location} • {member.experience} de experiencia
-                        </div>
                         <p className="text-gray-600">{member.bio}</p>
                       </div>
                     </div>

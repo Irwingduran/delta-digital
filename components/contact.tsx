@@ -39,28 +39,28 @@ const Contact = () => {
       title: "Teléfono",
       content: "+52 (55) 1234 5678",
       action: "tel:+525512345678",
-      color: "from-green-500 to-emerald-600",
+      color: "from-blue-500 to-blue-600",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       content: "contacto@deltaconsultora.com",
       action: "mailto:contacto@deltaconsultora.com",
-      color: "from-blue-500 to-blue-600",
+      color: "from-purple-500 to-indigo-600",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Ubicación",
       content: "Ciudad de México, México",
       action: "#",
-      color: "from-purple-500 to-indigo-600",
+      color: "from-blue-500 to-blue-600",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Horarios",
       content: "Lun - Vie: 9:00 AM - 6:00 PM",
       action: "#",
-      color: "from-orange-500 to-red-600",
+      color: "from-blue-500 to-blue-600",
     },
   ]
 
@@ -425,7 +425,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">¿Prefieres hablar directamente?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Si tienes una consulta urgente o prefieres una conversación directa, no dudes en llamarnos o escribirnos

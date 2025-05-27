@@ -15,7 +15,7 @@ const Services = () => {
           "Creamos sitios web profesionales, responsivos y optimizados para SEO que no solo se ven increíbles, sino que también convierten visitantes en clientes y mejoran tu presencia digital.",
         image: "/servicio-web.png",
         icon: <Code className="w-8 h-8" />,
-        color: "from-purple-500 to-indigo-500",
+        color: "from-blue-500 to-cyan-500",
         features: [
           "Diseño responsive y moderno",
           "Optimización SEO integrada",
@@ -51,7 +51,7 @@ const Services = () => {
         "Nos encargamos de administrar y optimizar tus campañas de Búsqueda, Display y YouTube en Google Ads para que consigas muchos clientes potenciales y aumentes tus ventas de manera efectiva.",
       image: "/servicio2.png",
       icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-blue-500 to-cyan-500",
       features: [
         "Campañas de búsqueda optimizadas",
         "Display y remarketing",
@@ -69,7 +69,7 @@ const Services = () => {
         "Diseñamos páginas web, videos promocionales y banners creativos para que tus campañas destaquen en el mercado y obtengas los mejores resultados en todas tus estrategias digitales.",
       image: "/servicio3.png",
       icon: <Palette className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500",
+      color: "from-blue-500 to-cyan-500",
       features: [
         "Diseño gráfico profesional",
         "Videos promocionales",

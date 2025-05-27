@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Check, Star, ArrowRight, Zap, Globe, Code, Target, Crown, Sparkles } from "lucide-react"
 
 const PricingPlans = () => {
-  const [activeCategory, setActiveCategory] = useState("google-ads")
+  const [activeCategory, setActiveCategory] = useState("web-development")
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null)
 
   const categories = [
@@ -18,9 +18,9 @@ const PricingPlans = () => {
       id: "individual",
       title: "INDIVIDUAL",
       subtitle: "Perfecto para empezar",
-      price: "$899",
+      price: "$XXXX",
       currency: "+ IVA",
-      initialPrice: "Primer mes $999 + IVA",
+      initialPrice: "Primer mes $XXXX + IVA",
       initialNote: "(Configuración inicial)",
       popular: false,
       color: "from-blue-500 to-blue-600",
@@ -42,12 +42,12 @@ const PricingPlans = () => {
       id: "3-pack",
       title: "3-PACK",
       subtitle: "Más alcance y resultados",
-      price: "$1,899",
+      price: "$XXXX",
       currency: "+ IVA",
-      initialPrice: "Primer mes $2,699 + IVA",
+      initialPrice: "Primer mes $XXXX + IVA",
       initialNote: "(Configuración inicial)",
       popular: true,
-      color: "from-green-500 to-emerald-600",
+      color: "from-purple-500 to-indigo-600",
       features: [
         "3 Campañas (búsqueda, display y YouTube)",
         "Estudio de palabras clave",
@@ -71,7 +71,7 @@ const PricingPlans = () => {
       initialPrice: "Incluye configuración inicial",
       initialNote: "",
       popular: false,
-      color: "from-purple-500 to-indigo-600",
+      color: "from-blue-500 to-blue-600",
       features: [
         "Campañas ilimitadas según necesidades",
         "Estudio de palabras clave avanzado",
@@ -93,7 +93,7 @@ const PricingPlans = () => {
       id: "landing-page",
       title: "LANDING PAGE",
       subtitle: "Página de aterrizaje efectiva",
-      price: "$2,999",
+      price: "$XXXX",
       currency: "+ IVA",
       initialPrice: "Entrega en 7-10 días",
       initialNote: "",
@@ -117,12 +117,12 @@ const PricingPlans = () => {
       id: "website-professional",
       title: "SITIO WEB PROFESIONAL",
       subtitle: "Presencia digital completa",
-      price: "$7,999",
+      price: "$XXXX",
       currency: "+ IVA",
       initialPrice: "Entrega en 15-20 días",
       initialNote: "",
       popular: true,
-      color: "from-emerald-500 to-green-600",
+      color: "from-purple-500 to-indigo-600",
       features: [
         "Hasta 10 páginas personalizadas",
         "Diseño único y profesional",
@@ -143,12 +143,12 @@ const PricingPlans = () => {
       id: "ecommerce",
       title: "TIENDA ONLINE",
       subtitle: "Vende en línea 24/7",
-      price: "$15,999",
+      price: "$XXXX",
       currency: "+ IVA",
       initialPrice: "Entrega en 25-30 días",
       initialNote: "",
       popular: false,
-      color: "from-orange-500 to-red-600",
+      color: "from-cyan-500 to-blue-600",
       features: [
         "Catálogo de productos ilimitado",
         "Carrito de compras avanzado",
@@ -175,7 +175,7 @@ const PricingPlans = () => {
       initialPrice: "Desarrollo a medida",
       initialNote: "",
       popular: false,
-      color: "from-purple-500 to-pink-600",
+      color: "from-cyan-500 to-blue-600 ",
       features: [
         "Desarrollo completamente personalizado",
         "Base de datos avanzada",
@@ -374,7 +374,7 @@ const PricingPlans = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">¿Listo para hacer crecer tu negocio?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Contáctanos hoy mismo y descubre cómo nuestros servicios pueden transformar tu presencia digital y

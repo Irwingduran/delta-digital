@@ -21,7 +21,7 @@ const features = [
       "Configuramos correctamente tus campañas para que funcionen y atraemos clientes potenciales a un bajo costo.",
     image: "/google_ads.png",
     icon: <Target className="w-6 h-6" />,
-    color: "from-indigo-500 to-indigo-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     id: "03",
@@ -30,7 +30,7 @@ const features = [
       "Contamos con amplia experiencia en diferentes sectores. Adecuamos tus anuncios de acuerdo a tu sector y tus objetivos.",
     image: "/google_ads3.png",
     icon: <Users className="w-6 h-6" />,
-    color: "from-purple-500 to-purple-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     id: "04",
@@ -39,7 +39,7 @@ const features = [
       "No te dejamos solo, te acompañamos durante todo el proceso para maximizar el rendimiento de tus campañas.",
     image: "/acompanamiento.png",
     icon: <Clock className="w-6 h-6" />,
-    color: "from-sky-500 to-sky-600",
+    color: "from-blue-500 to-blue-600",
   },
 ]
 
