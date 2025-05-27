@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight, Filter, ArrowUpRight, X } from "lucide-react"
+import { ChevronLeft, ChevronRight, Filter, ArrowUpRight } from "lucide-react"
 
 const projects = [
     {
@@ -53,7 +53,7 @@ const ProjectShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos")
   const [filteredProjects, setFilteredProjects] = useState(projects)
   const [viewMode, setViewMode] = useState("carousel") // 'carousel' o 'grid'
-  const [selectedProject, setSelectedProject] = useState<number | null>(null)
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const carouselRef = useRef<HTMLDivElement>(null)
 
@@ -68,17 +68,19 @@ const ProjectShowcase = () => {
   }, [selectedCategory])
 
   // Navegación del carrusel
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex === filteredProjects.length - 1 ? 0 : prevIndex + 1))
-  }
+  }, [filteredProjects.length])
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? filteredProjects.length - 1 : prevIndex - 1))
-  }
+  }, [filteredProjects.length])
+
+  // (Make sure to import useCallback at the top)
+
 
   // Abrir modal con detalles del proyecto
   const openProjectDetails = (id: number) => {
-    setSelectedProject(id)
     setIsModalOpen(true)
   }
 
