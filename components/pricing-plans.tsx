@@ -288,16 +288,24 @@ const PricingPlans = () => {
         >
           {currentPlans.map((plan) => (
             <motion.div
-              key={plan.id}
-              variants={cardVariants}
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.3 }}
-              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
-                plan.popular ? "ring-2 ring-blue-500 ring-opacity-50" : ""
-              }`}
-              onMouseEnter={() => setHoveredPlan(plan.id)}
-              onMouseLeave={() => setHoveredPlan(null)}
-            >
+        key={activeCategory}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      >
+        {currentPlans.map((plan) => (
+          <motion.div
+            key={plan.id}
+            variants={cardVariants}
+            whileHover={{ y: -8 }}
+            transition={{ duration: 0.3 }}
+            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
+              plan.popular ? "ring-2 ring-blue-500 ring-opacity-50" : ""
+            }`}
+            onMouseEnter={() => setHoveredPlan(plan.id)}
+            onMouseLeave={() => setHoveredPlan(null)}
+          >
               {/* Badge de popular */}
               {plan.popular && (
                 <div className="absolute top-4 right-4 z-10">
@@ -320,19 +328,20 @@ const PricingPlans = () => {
                       <p className="text-sm opacity-90">{plan.subtitle}</p>
                     </div>
                   </div>
+
                 </div>
               </div>
 
               {/* Contenido del plan */}
               <div className="p-6">
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-600">
-                      {feature.icon || <Check className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />}
-                      <span>{feature.text || feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <ul className="space-y-3 mb-6">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start text-sm text-gray-600">
+                    {feature.icon}
+                    <span>{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
 
                 {plan.note && (
                   <p className="text-xs text-gray-500 mb-6 italic border-t border-gray-100 pt-4">{plan.note}</p>
