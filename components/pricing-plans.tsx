@@ -320,17 +320,6 @@ const PricingPlans = () => {
                       <p className="text-sm opacity-90">{plan.subtitle}</p>
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <div className="flex items-baseline">
-                      <span className="text-3xl font-bold">{plan.price}</span>
-                      <span className="text-sm ml-2 opacity-90">{plan.currency}</span>
-                    </div>
-                    {plan.initialPrice && (
-                      <p className="text-sm opacity-90 mt-1">
-                        {plan.initialPrice} {plan.initialNote}
-                      </p>
-                    )}
-                  </div>
                 </div>
               </div>
 
