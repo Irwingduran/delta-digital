@@ -61,24 +61,6 @@ const Services = () => {
       ],
       benefits: ["Más leads calificados", "Menor costo por conversión", "Mayor visibilidad"],
     },
-    {
-      id: 4,
-      title: "Servicios Creativos",
-      shortDescription: "Contenido visual que impacta",
-      description:
-        "Diseñamos páginas web, videos promocionales y banners creativos para que tus campañas destaquen en el mercado y obtengas los mejores resultados en todas tus estrategias digitales.",
-      image: "/servicio3.png",
-      icon: <Palette className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      features: [
-        "Diseño gráfico profesional",
-        "Videos promocionales",
-        "Banners para campañas",
-        "Identidad visual",
-        "Contenido para redes sociales",
-      ],
-      benefits: ["Mayor engagement", "Mejor reconocimiento de marca", "Contenido profesional"],
-    },
   ]
 
   // Animation variants
@@ -136,13 +118,13 @@ const Services = () => {
           </motion.p>
         </div>
 
-        {/* Grid de servicios */}
+        {/* Grid de servicios - MODIFICADO A 3 COLUMNAS */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8" // Cambiado de md:grid-cols-2 a md:grid-cols-3
         >
           {services.map((service, index) => (
             <motion.div
@@ -159,7 +141,7 @@ const Services = () => {
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div
                   className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}

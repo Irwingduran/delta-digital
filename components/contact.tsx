@@ -37,15 +37,15 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Teléfono",
-      content: "+52 (55) 1234 5678",
-      action: "tel:+525512345678",
+      content: "+52 (55) 7962 7960",
+      action: "tel:+525579627960",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      content: "contacto@deltaconsultora.com",
-      action: "mailto:contacto@deltaconsultora.com",
+      content: "contacto@delta-digital.com.mx",
+      action: "mailto:contacto@delta-digital.com.mx",
       color: "from-purple-500 to-indigo-600",
     },
     {
@@ -58,7 +58,7 @@ const Contact = () => {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Horarios",
-      content: "Lun - Vie: 9:00 AM - 6:00 PM",
+      content: "Lun - Vie: 9:00 AM - 8:00 PM",
       action: "#",
       color: "from-blue-500 to-blue-600",
     },

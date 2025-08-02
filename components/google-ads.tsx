@@ -87,7 +87,7 @@ const GoogleAds = () => {
               <div className={`bg-gradient-to-r ${feature.color} p-6 text-white relative overflow-hidden`}>
                 <div className="absolute top-0 right-0 w-20 h-20 bg-white opacity-10 rounded-full -translate-y-10 translate-x-10" />
                 <div className="relative z-10 flex justify-between items-start">
-                  <div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-opacity-20 rounded-lg flex items-center justify-center">
                     {feature.icon}
                   </div>
                   <span className="text-2xl font-bold opacity-80">{feature.id}</span>

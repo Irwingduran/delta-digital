@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: "Servicios", href: "/#services" },
     { name: "Portfolio", href: "/#portfolio" },
     { name: "Paquetes", href: "/#packages" },
-    { name: "Contacto", href: "/contacto" },
+    { name: "Contacto", href: "/#contacto" },
   ]
 
   useEffect(() => {

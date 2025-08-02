@@ -2,15 +2,38 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Check, Star, ArrowRight, Zap, Globe, Code, Target, Crown, Sparkles } from "lucide-react"
+import { 
+  Check, 
+  Star, 
+  ArrowRight, 
+  Zap, 
+  Globe, 
+  Code, 
+  Target, 
+  Crown, 
+  Sparkles,
+  ShoppingCart,
+  LayoutDashboard,
+  BarChart2,
+  CreditCard,
+  Users,
+  Shield,
+  Mail,
+  Image,
+  Smartphone,
+  Calendar,
+  FileText,
+  Settings,
+  
+} from "lucide-react"
 
 const PricingPlans = () => {
-  const [activeCategory, setActiveCategory] = useState("web-development")
+  const [activeCategory, setActiveCategory] = useState("google-ads")
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null)
 
   const categories = [
-    { id: "web-development", name: "Desarrollo Web", icon: <Code className="w-5 h-5" /> },
     { id: "google-ads", name: "Google Ads", icon: <Target className="w-5 h-5" /> },
+    { id: "web-development", name: "Desarrollo Web", icon: <Code className="w-5 h-5" /> },
   ]
 
   const googleAdsPlans = [
@@ -18,22 +41,19 @@ const PricingPlans = () => {
       id: "individual",
       title: "INDIVIDUAL",
       subtitle: "Perfecto para empezar",
-      price: "$XXXX",
-      currency: "+ IVA",
-      initialPrice: "Primer mes $XXXX + IVA",
       initialNote: "(Configuración inicial)",
       popular: false,
       color: "from-blue-500 to-blue-600",
       features: [
-        "1 Campaña (búsqueda, display y YouTube)",
-        "Estudio de palabras clave",
-        "Dos grupos de anuncios y un anuncio por grupo",
-        "Configuración inicial de la campaña",
-        "Seguimiento de acciones (llamadas, WhatsApp, conversiones)",
-        "Dashboard online de informes",
-        "Configuración de Google Analytics",
-        "Administración y optimización periódica",
-        "Revisión mensual con cliente",
+        { text: "1 Campaña (búsqueda, display y YouTube)", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Estudio de palabras clave", icon: <FileText className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Dos grupos de anuncios y un anuncio por grupo", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración inicial de la campaña", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Seguimiento de acciones (llamadas, WhatsApp, conversiones)", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Dashboard online de informes", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración de Google Analytics", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Administración y optimización periódica", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Revisión mensual con cliente", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*No incluye inversión publicitaria",
       icon: <Zap className="w-6 h-6" />,
@@ -42,22 +62,19 @@ const PricingPlans = () => {
       id: "3-pack",
       title: "3-PACK",
       subtitle: "Más alcance y resultados",
-      price: "$XXXX",
-      currency: "+ IVA",
-      initialPrice: "Primer mes $XXXX + IVA",
       initialNote: "(Configuración inicial)",
       popular: true,
       color: "from-purple-500 to-indigo-600",
       features: [
-        "3 Campañas (búsqueda, display y YouTube)",
-        "Estudio de palabras clave",
-        "Seis grupos de anuncios y un anuncio por grupo",
-        "Configuración inicial de las campañas",
-        "Seguimiento de acciones (llamadas, WhatsApp, conversiones)",
-        "Dashboard online de informes",
-        "Configuración de Google Analytics",
-        "Administración y optimización periódica",
-        "Revisión mensual con cliente",
+        { text: "3 Campañas (búsqueda, display y YouTube)", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Estudio de palabras clave", icon: <FileText className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Seis grupos de anuncios y un anuncio por grupo", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración inicial de las campañas", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Seguimiento de acciones (llamadas, WhatsApp, conversiones)", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Dashboard online de informes", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración de Google Analytics", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Administración y optimización periódica", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Revisión mensual con cliente", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*No incluye inversión publicitaria",
       icon: <Star className="w-6 h-6" />,
@@ -66,22 +83,19 @@ const PricingPlans = () => {
       id: "empresarial",
       title: "EMPRESARIAL",
       subtitle: "Solución completa y personalizada",
-      price: "Cotización",
-      currency: "personalizada",
-      initialPrice: "Incluye configuración inicial",
       initialNote: "",
       popular: false,
       color: "from-blue-500 to-blue-600",
       features: [
-        "Campañas ilimitadas según necesidades",
-        "Estudio de palabras clave avanzado",
-        "Configuración inicial de las campañas",
-        "Seguimiento de acciones completo",
-        "Un ejecutivo dedicado",
-        "Dashboard Premium de informes",
-        "Configuración de Google Analytics",
-        "Administración y optimización periódica",
-        "Revisión semanal con cliente",
+        { text: "Campañas ilimitadas según necesidades", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Estudio de palabras clave avanzado", icon: <FileText className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración inicial de las campañas", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Seguimiento de acciones completo", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Un ejecutivo dedicado", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Dashboard Premium de informes", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Configuración de Google Analytics", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Administración y optimización periódica", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Revisión semanal con cliente", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*No incluye inversión publicitaria",
       icon: <Crown className="w-6 h-6" />,
@@ -93,22 +107,20 @@ const PricingPlans = () => {
       id: "landing-page",
       title: "LANDING PAGE",
       subtitle: "Página de aterrizaje efectiva",
-      price: "$XXXX",
-      currency: "+ IVA",
       initialPrice: "Entrega en 7-10 días",
       initialNote: "",
       popular: false,
       color: "from-cyan-500 to-blue-600",
       features: [
-        "4 Secciones (Inicio, Nosotros, Galería, Contacto)",
-        "Certificado SSL (Página Segura)",
-        "Enlace a redes sociales",
-        "Botón de contacto de WhatsApp",
-        "Formulario enlazado a correo electrónico",
-        "Diseño Responsivo (móvil y desktop)",
-        "Optimización de imágenes",
-        "Optimización SEO básica",
-        "Actualización gratuita durante 1 año",
+        { text: "4 Secciones (Inicio, Nosotros, Galería, Contacto)", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Certificado SSL (Página Segura)", icon: <Shield className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Enlace a redes sociales", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Botón de contacto de WhatsApp", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Formulario enlazado a correo electrónico", icon: <Mail className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Diseño Responsivo (móvil y desktop)", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Optimización de imágenes", icon: <Image className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Optimización SEO básica", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Actualización gratuita durante 1 año", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*Host y Dominio se cotizan por separado",
       icon: <Globe className="w-6 h-6" />,
@@ -117,24 +129,22 @@ const PricingPlans = () => {
       id: "website-professional",
       title: "SITIO WEB PROFESIONAL",
       subtitle: "Presencia digital completa",
-      price: "$XXXX",
-      currency: "+ IVA",
       initialPrice: "Entrega en 15-20 días",
       initialNote: "",
       popular: true,
       color: "from-purple-500 to-indigo-600",
       features: [
-        "Hasta 10 páginas personalizadas",
-        "Diseño único y profesional",
-        "Sistema de gestión de contenidos (CMS)",
-        "Optimización SEO avanzada",
-        "Integración con Google Analytics",
-        "Formularios de contacto avanzados",
-        "Galería de imágenes interactiva",
-        "Blog integrado",
-        "Certificado SSL incluido",
-        "Capacitación para administrar el sitio",
-        "Soporte técnico por 3 meses",
+        { text: "Hasta 10 páginas personalizadas", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Diseño único y profesional", icon: <Image className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Sistema de gestión de contenidos (CMS)", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Optimización SEO avanzada", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Integración con Google Analytics", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Formularios de contacto avanzados", icon: <Mail className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Galería de imágenes interactiva", icon: <Image className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Blog integrado", icon: <FileText className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Certificado SSL incluido", icon: <Shield className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Capacitación para administrar el sitio", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Soporte técnico por 3 meses", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*Incluye hosting por 1 año",
       icon: <Code className="w-6 h-6" />,
@@ -143,25 +153,23 @@ const PricingPlans = () => {
       id: "ecommerce",
       title: "TIENDA ONLINE",
       subtitle: "Vende en línea 24/7",
-      price: "$XXXX",
-      currency: "+ IVA",
       initialPrice: "Entrega en 25-30 días",
       initialNote: "",
       popular: false,
       color: "from-cyan-500 to-blue-600",
       features: [
-        "Catálogo de productos ilimitado",
-        "Carrito de compras avanzado",
-        "Pasarela de pagos integrada",
-        "Panel de administración completo",
-        "Gestión de inventario",
-        "Sistema de cupones y descuentos",
-        "Integración con redes sociales",
-        "Optimización SEO para e-commerce",
-        "Diseño responsivo premium",
-        "Certificado SSL incluido",
-        "Capacitación completa",
-        "Soporte técnico por 6 meses",
+        { text: "Catálogo de productos ilimitado", icon: <ShoppingCart className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Carrito de compras avanzado", icon: <ShoppingCart className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Pasarela de pagos integrada", icon: <CreditCard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Panel de administración completo", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Gestión de inventario", icon: <ShoppingCart className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Sistema de cupones y descuentos", icon: <ShoppingCart className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Integración con redes sociales", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Optimización SEO para e-commerce", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Diseño responsivo premium", icon: <Smartphone className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Certificado SSL incluido", icon: <Shield className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Capacitación completa", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Soporte técnico por 6 meses", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*Incluye hosting por 1 año y configuración de pagos",
       icon: <Sparkles className="w-6 h-6" />,
@@ -170,32 +178,30 @@ const PricingPlans = () => {
       id: "web-app",
       title: "APLICACIÓN WEB",
       subtitle: "Solución personalizada",
-      price: "Cotización",
-      currency: "personalizada",
       initialPrice: "Desarrollo a medida",
       initialNote: "",
       popular: false,
       color: "from-cyan-500 to-blue-600 ",
       features: [
-        "Desarrollo completamente personalizado",
-        "Base de datos avanzada",
-        "Panel de administración",
-        "API REST integrada",
-        "Autenticación de usuarios",
-        "Dashboard con métricas",
-        "Integración con servicios externos",
-        "Optimización de rendimiento",
-        "Seguridad avanzada",
-        "Documentación técnica",
-        "Capacitación del equipo",
-        "Soporte técnico extendido",
+        { text: "Desarrollo completamente personalizado", icon: <Code className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Base de datos avanzada", icon: <LayoutDashboard className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Panel de administración", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "API REST integrada", icon: <Code className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Autenticación de usuarios", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Dashboard con métricas", icon: <BarChart2 className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Integración con servicios externos", icon: <Settings className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Optimización de rendimiento", icon: <Zap className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Seguridad avanzada", icon: <Shield className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Documentación técnica", icon: <FileText className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Capacitación del equipo", icon: <Users className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
+        { text: "Soporte técnico extendido", icon: <Calendar className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" /> },
       ],
       note: "*Incluye análisis de requerimientos y arquitectura",
       icon: <Crown className="w-6 h-6" />,
     },
   ]
 
-  const currentPlans = activeCategory === "google-ads" ? googleAdsPlans : webDevelopmentPlans
+  const currentPlans = activeCategory === "google-ads" ?  googleAdsPlans : webDevelopmentPlans
 
   // Animation variants
   const containerVariants = {
@@ -306,7 +312,7 @@ const PricingPlans = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16" />
                 <div className="relative z-10">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-3">
+                    <div className="w-10 h-10   bg-opacity-20 rounded-lg flex items-center justify-center mr-3">
                       {plan.icon}
                     </div>
                     <div>
@@ -333,8 +339,8 @@ const PricingPlans = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-sm text-gray-600">
-                      <Check className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
+                      {feature.icon || <Check className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />}
+                      <span>{feature.text || feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -366,8 +372,8 @@ const PricingPlans = () => {
           ))}
         </motion.div>
 
-      {/* Call to Action */}
-      <motion.div
+        {/* Call to Action */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
