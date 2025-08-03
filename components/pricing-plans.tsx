@@ -388,11 +388,8 @@ const PricingPlans = () => {
               aumentar tus ventas
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
+              <button  onClick={() => window.open("https://wa.me/525579627960?text=Hola%2C+encontr%C3%A9+tu+sitio+web+%27Delta+Digital%27+y+me+gustar%C3%ADa+llevar+mi+negocio+al+siguiente+nivel")} className="bg-white text-blue-600 px-6 py-3 cursor-pointer rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
                 Solicitar consulta gratuita
-              </button>
-              <button className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors duration-200">
-                Ver nuestros casos de éxito
               </button>
             </div>
           </div>

@@ -103,9 +103,9 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="mt-10"
           >
-            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-400 px-8 py-3 text-white shadow-lg transition-all duration-300 hover:shadow-blue-300/50 hover:shadow-xl">
+            <button onClick={() => window.open("https://wa.me/525579627960?text=Hola%2C+encontr%C3%A9+tu+sitio+web+%27Delta+Digital%27+y+me+gustar%C3%ADa+llevar+mi+negocio+al+siguiente+nivel") } className="group relative overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-400 px-8 py-3 text-white shadow-lg transition-all duration-300 hover:shadow-blue-300/50 hover:shadow-xl">
               <span className="relative z-10 text-lg font-medium tracking-wider">CONTÁCTANOS</span>
-              <span className="absolute inset-0 z-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              <span className="cursor-pointer absolute inset-0 z-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
             </button>
           </motion.div>
         </div>

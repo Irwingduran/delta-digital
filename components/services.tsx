@@ -13,7 +13,7 @@ const Services = () => {
         shortDescription: "Sitios web modernos y funcionales",
         description:
           "Creamos sitios web profesionales, responsivos y optimizados para SEO que no solo se ven increíbles, sino que también convierten visitantes en clientes y mejoran tu presencia digital.",
-        image: "/servicio-web.png",
+        image: "/service4.jpg",
         icon: <Code className="w-8 h-8" />,
         color: "from-blue-500 to-cyan-500",
         features: [
@@ -198,8 +198,8 @@ const Services = () => {
                 </div>
 
                 {/* Botón de acción */}
-                <button
-                  className={`w-full py-3 px-4 rounded-xl font-medium text-white bg-gradient-to-r ${service.color} hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center group`}
+                <button onClick={() => window.open("https://wa.me/525579627960?text=Hola%2C+encontr%C3%A9+tu+sitio+web+%27Delta+Digital%27+y+me+gustar%C3%ADa+llevar+mi+negocio+al+siguiente+nivel")}
+                  className={`cursor-pointer w-full py-3 px-4 rounded-xl font-medium text-white bg-gradient-to-r ${service.color} hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center group`}
                 >
                   <span>Más información</span>
                   <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" />
