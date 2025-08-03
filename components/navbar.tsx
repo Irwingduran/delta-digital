@@ -186,7 +186,7 @@ const Navbar = () => {
                 >
                   <Facebook size={20} />
                 </a>*/}
-                <a
+                <Link
                   href="https://instagram.com/delta"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -194,13 +194,13 @@ const Navbar = () => {
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/#contacto"
                   className="ml-auto px-5 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-md hover:shadow-md transition-all duration-200"
                 >
                   Contáctanos
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
