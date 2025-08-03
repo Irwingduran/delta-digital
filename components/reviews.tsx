@@ -29,12 +29,12 @@ const Reviews = () => {
   const testimonials: Testimonial[] = useMemo(() => ([ 
     {
       id: 1,
-      img: "/images/clients/findoctor.png",
+      img: "/clients/findoctor.png",
       quote:
         "Excelente servicio, nos han ayudado a publicitar a más de 50 doctores generándoles más consultas y tráfico hacia su tarjeta digital. Totalmente recomendable.",
       name: "Findoctor",
       role: "Directorio Médico",
-      category: "Google Ads",
+      category: "SEO-Desarrollo",
       rating: 5,
       date: "Hace 2 meses",
       results: "50+ doctores publicitados",
@@ -44,7 +44,7 @@ const Reviews = () => {
     },
     {
       id: 2,
-      img: "/images/clients/nextor-web.png",
+      img: "/clients/nextor-web.png",
       quote:
         "Muy buen servicio, nos han ayudado a posicionar la marca y obtener leads calificados a bajo costo. Además, están muy al pendiente de las campañas.",
       name: "Nextor Móvil",
@@ -59,7 +59,7 @@ const Reviews = () => {
     },
     {
       id: 3,
-      img: "/images/clients/ccbh-web.png",
+      img: "/clients/ccbh-web.png",
       quote:
         "Muy buen servicio, explican todo muy bien y las veces que sean necesarias. Nos ayudaron a tener mayor presencia en Google.",
       name: "CCBH",
@@ -74,12 +74,12 @@ const Reviews = () => {
     },
     {
       id: 4,
-      img: "/images/clients/arte41-web.png",
+      img: "/clients/arte41-web.png",
       quote:
         "Muy buena atención y personalizada. Nos ayudaron a posicionarnos en Google Mi Negocio con un bajo presupuesto.",
       name: "Arte41",
       role: "Estudio de Arte",
-      category: "SEO Local",
+      category: "SEO-Desarrollo",
       rating: 5,
       date: "Hace 1 mes",
       results: "Top 3 en búsquedas locales",
@@ -89,7 +89,7 @@ const Reviews = () => {
     },
     {
       id: 5,
-      img: "/images/clients/sabai-web.png",
+      img: "/clients/sabai-web.png",
       quote:
         "Nos ayudaron a llegar a más público, generando mucho más movimiento en el SPA. Muy recomendables.",
       name: "Sabai Center",
@@ -104,7 +104,7 @@ const Reviews = () => {
     },
     {
       id: 6,
-      img: "/images/clients/golazo-web.png",
+      img: "/clients/golazo-web.png",
       quote:
         "Nos ayudan con presencia en Google y atracción de más clientes, fortaleciendo nuestro sitio web y dependiendo menos de plataformas como Uber Eats o Didi.",
       name: "El Golazo",
@@ -119,7 +119,7 @@ const Reviews = () => {
     },
   ]), []); 
 
-  const categories = ["Todos", "Google Ads", "SEO", "SEO Local", "Desarrollo Web"]
+  const categories = ["Todos", "Google Ads", "SEO", "SEO-Desarrollo", "Desarrollo Web"]
 
 
   // Filtrar testimonios por categoría

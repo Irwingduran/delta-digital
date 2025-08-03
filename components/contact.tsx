@@ -31,7 +31,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const services = ["Consultoría Digital", "Google Ads", "Desarrollo Web", "SEO", "Servicios Creativos", "Otro"]
+  const services = ["Consultoría Digital", "Google Ads", "Desarrollo Web", "SEO", "Otro"]
 
   const contactInfo = [
     {
@@ -52,14 +52,14 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: "Ubicación",
       content: "Ciudad de México, México",
-      action: "#",
+      action: "/#contact",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Horarios",
       content: "Lun - Vie: 9:00 AM - 8:00 PM",
-      action: "#",
+      action: "/#contact",
       color: "from-blue-500 to-blue-600",
     },
   ]
@@ -433,7 +433,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:+525512345678"
+                href="tel:+525579627960"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -442,7 +442,7 @@ const Contact = () => {
                 Llamar ahora
               </motion.a>
               <motion.a
-                href="https://wa.me/525512345678"
+                href="https://wa.me/525579627960?text=Hola%2C+encontr%C3%A9+tu+sitio+web+%27Delta+Digital%27+y+me+gustar%C3%ADa+llevar+mi+negocio+al+siguiente+nivel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center justify-center"

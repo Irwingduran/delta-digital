@@ -56,7 +56,7 @@ const About = () => {
               </h2>
 
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Somos una consultora joven de marketing digital, integrada por gente altamente capacitada y certificada
+                Somos una consultora de marketing digital y desarrollo web, integrada por gente altamente capacitada y certificada
                 en herramientas de vanguardia y comprometida con sus clientes para generar valor. Somos especialistas en
                 Google Ads y herramientas complementarias, las cuales aunadas a nuestra experiencia harán que su negocio
                 crezca exponencialmente a corto plazo.

@@ -100,17 +100,7 @@ const Navbar = () => {
 
             {/* Social Media Icons */}
             <div className="flex items-center space-x-3">
-              <motion.a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200"
-                aria-label="Facebook"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Facebook size={18} />
-              </motion.a>
+           
               <motion.a
                 href="https://instagram.com"
                 target="_blank"
@@ -186,6 +176,7 @@ const Navbar = () => {
 
               {/* Mobile Social Media */}
               <div className="flex items-center space-x-3 mt-4 pt-4 border-t border-gray-100">
+                   {/* 
                 <a
                   href="https://facebook.com"
                   target="_blank"
@@ -194,9 +185,9 @@ const Navbar = () => {
                   aria-label="Facebook"
                 >
                   <Facebook size={20} />
-                </a>
+                </a>*/}
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/delta"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-pink-100 hover:text-pink-600 transition-colors duration-200"

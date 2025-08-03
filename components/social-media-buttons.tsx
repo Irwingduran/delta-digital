@@ -12,7 +12,7 @@ const SocialMediaButtons: React.FC = () => {
   const socialLinks: SocialLink[] = [
     {
      name: 'WhatsApp',
-     url: 'https://wa.me/525579627960',
+     url: "https://wa.me/525579627960?text=Hola%2C+encontré+tu+sitio+web+'Delta+Digital'+y+me+gustaría+llevar+mi+negocio+al+siguiente+nivel",
      bgColor: 'bg-green-500',
     hoverColor: 'hover:bg-green-600',
     icon: (

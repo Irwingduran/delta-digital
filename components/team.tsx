@@ -15,7 +15,7 @@ const Team = () => {
       name: "Arturo",
       role: "CEO & Founder",
       fullRole: "Chief Executive Officer & Founder",
-      image: "/team/gerardo.jpg",
+      image: "/team/img1.png",
       bio: "Visionario líder con más de 10 años de experiencia en marketing digital. Especialista en estrategias de crecimiento y transformación digital para empresas.",
       skills: ["Estrategia Digital", "Liderazgo", "Google Ads", "Análisis de Datos"],
       achievements: ["Google Ads Certified", "50+ Proyectos Exitosos", "Mentor Startup"],
@@ -25,8 +25,8 @@ const Team = () => {
     {
       id: 2,
       name: "Gerardo",
-      role: "CTO",
-      fullRole: "Chief Technology Officer",
+      role: "Co-Founder",
+      fullRole: "Co Founder",
       image: "/team/arturo.jpg",
       bio: "Experto en tecnología con amplia experiencia en desarrollo de soluciones web escalables y arquitectura de sistemas modernos.",
       skills: ["Desarrollo Web", "Arquitectura", "DevOps", "Bases de Datos"],
@@ -39,7 +39,7 @@ const Team = () => {
       name: "Irwing",
       role: "Lead Developer",
       fullRole: "Full-Stack Developer",
-      image: "/team/irwing.jpg",
+      image: "/team/img2.png",
       bio: "Desarrollador full-stack especializado en tecnologías modernas. Apasionado por crear experiencias web excepcionales y código limpio.",
       skills: ["Python", "React", "TypeScript", "Next.js"],
       achievements: ["Hackathon Winner","React Expert", "Open Source", "Code Mentor"],
@@ -168,7 +168,7 @@ const Team = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t ${member.color} opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
+                  className={`absolute inset-0  ${member.color} opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
                 />
 
                 {/* Overlay con información adicional */}
@@ -185,7 +185,7 @@ const Team = () => {
                         <p className="text-sm mb-2">{member.bio}</p>
                         <div className="flex justify-center space-x-2">
                           {member.skills.slice(0, 2).map((skill, idx) => (
-                            <span key={idx} className="px-2 py-1 bg-white bg-opacity-20 rounded-full text-xs">
+                            <span key={idx} className="px-2 py-1 bg-blue-500 bg-opacity-20 rounded-full text-xs">
                               {skill}
                             </span>
                           ))}

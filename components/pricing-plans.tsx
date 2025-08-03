@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { 
-  Check, 
   Star, 
   ArrowRight, 
   Zap, 
@@ -24,7 +23,11 @@ import {
   Calendar,
   FileText,
   Settings,
-  
+  User,
+  Package,
+  Building2,
+  LayoutTemplate,
+  Cpu
 } from "lucide-react"
 
 const PricingPlans = () => {
@@ -39,6 +42,7 @@ const PricingPlans = () => {
   const googleAdsPlans = [
     {
       id: "individual",
+      idIcon: <User className="w-5 h-5 text-blue-500" />,
       title: "INDIVIDUAL",
       subtitle: "Perfecto para empezar",
       initialNote: "(Configuración inicial)",
@@ -60,6 +64,7 @@ const PricingPlans = () => {
     },
     {
       id: "3-pack",
+      idIcon: <Package className="w-5 h-5 text-purple-500" />,
       title: "3-PACK",
       subtitle: "Más alcance y resultados",
       initialNote: "(Configuración inicial)",
@@ -81,6 +86,7 @@ const PricingPlans = () => {
     },
     {
       id: "empresarial",
+      idIcon: <Building2 className="w-5 h-5 text-blue-500" />,
       title: "EMPRESARIAL",
       subtitle: "Solución completa y personalizada",
       initialNote: "",
@@ -105,6 +111,7 @@ const PricingPlans = () => {
   const webDevelopmentPlans = [
     {
       id: "landing-page",
+      idIcon: <LayoutTemplate className="w-5 h-5 text-cyan-500" />,
       title: "LANDING PAGE",
       subtitle: "Página de aterrizaje efectiva",
       initialPrice: "Entrega en 7-10 días",
@@ -127,6 +134,7 @@ const PricingPlans = () => {
     },
     {
       id: "website-professional",
+      idIcon: <Globe className="w-5 h-5 text-purple-500" />,
       title: "SITIO WEB PROFESIONAL",
       subtitle: "Presencia digital completa",
       initialPrice: "Entrega en 15-20 días",
@@ -151,6 +159,7 @@ const PricingPlans = () => {
     },
     {
       id: "ecommerce",
+      idIcon: <ShoppingCart className="w-5 h-5 text-cyan-500" />,
       title: "TIENDA ONLINE",
       subtitle: "Vende en línea 24/7",
       initialPrice: "Entrega en 25-30 días",
@@ -176,6 +185,7 @@ const PricingPlans = () => {
     },
     {
       id: "web-app",
+      idIcon: <Cpu className="w-5 h-5 text-cyan-500" />,
       title: "APLICACIÓN WEB",
       subtitle: "Solución personalizada",
       initialPrice: "Desarrollo a medida",
@@ -201,7 +211,7 @@ const PricingPlans = () => {
     },
   ]
 
-  const currentPlans = activeCategory === "google-ads" ?  googleAdsPlans : webDevelopmentPlans
+  const currentPlans = activeCategory === "google-ads" ? googleAdsPlans : webDevelopmentPlans
 
   // Animation variants
   const containerVariants = {
@@ -288,24 +298,16 @@ const PricingPlans = () => {
         >
           {currentPlans.map((plan) => (
             <motion.div
-        key={activeCategory}
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-      >
-        {currentPlans.map((plan) => (
-          <motion.div
-            key={plan.id}
-            variants={cardVariants}
-            whileHover={{ y: -8 }}
-            transition={{ duration: 0.3 }}
-            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
-              plan.popular ? "ring-2 ring-blue-500 ring-opacity-50" : ""
-            }`}
-            onMouseEnter={() => setHoveredPlan(plan.id)}
-            onMouseLeave={() => setHoveredPlan(null)}
-          >
+              key={plan.id}
+              variants={cardVariants}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
+                plan.popular ? "ring-2 ring-blue-500 ring-opacity-50" : ""
+              }`}
+              onMouseEnter={() => setHoveredPlan(plan.id)}
+              onMouseLeave={() => setHoveredPlan(null)}
+            >
               {/* Badge de popular */}
               {plan.popular && (
                 <div className="absolute top-4 right-4 z-10">
@@ -315,12 +317,13 @@ const PricingPlans = () => {
                 </div>
               )}
 
+
               {/* Header del plan */}
               <div className={`bg-gradient-to-r ${plan.color} p-6 text-white relative overflow-hidden`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16" />
                 <div className="relative z-10">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10   bg-opacity-20 rounded-lg flex items-center justify-center mr-3">
+                    <div className="w-10 h-10 bg-opacity-20 rounded-lg flex items-center justify-center mr-3">
                       {plan.icon}
                     </div>
                     <div>
@@ -328,33 +331,33 @@ const PricingPlans = () => {
                       <p className="text-sm opacity-90">{plan.subtitle}</p>
                     </div>
                   </div>
-
+                  </div>
                 </div>
-              </div>
 
               {/* Contenido del plan */}
               <div className="p-6">
-                  <ul className="space-y-3 mb-6">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-sm text-gray-600">
-                    {feature.icon}
-                    <span>{feature.text}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-600">
+                      {feature.icon}
+                      <span>{feature.text}</span>
+                    </li>
+                  ))}
+                </ul>
 
                 {plan.note && (
                   <p className="text-xs text-gray-500 mb-6 italic border-t border-gray-100 pt-4">{plan.note}</p>
                 )}
 
                 {/* Botón de acción */}
-                <button
-                  className={`w-full py-3 px-4 rounded-xl font-medium text-white bg-gradient-to-r ${plan.color} hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center group`}
+                <button onClick={() => window.open("https://wa.me/525579627960?text=Hola%2C+encontré+tu+sitio+web+'Delta+Digital'+y+me+gustaría+llevar+mi+negocio+al+siguiente+nivel")}
+                  className={`cursor-pointer w-full py-3 px-4 rounded-xl font-medium text-white bg-gradient-to-r ${plan.color} hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center group`}
                 >
+                
                   <span>
-                    {plan.price === "Cotización" || plan.price === "Cotizamos en base a tus necesidades"
+                    {plan.color === "Cotización" || plan.color === "Cotizamos en base a tus necesidades"
                       ? "SOLICITAR COTIZACIÓN"
-                      : "CONTRATAR AHORA"}
+                      : "SOLICITAR COTIZACIÓN"}
                   </span>
                   <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" />
                 </button>

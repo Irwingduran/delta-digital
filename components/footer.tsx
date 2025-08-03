@@ -75,22 +75,29 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-gray-800 font-semibold text-lg mb-4">Enlaces rápidos</h3>
-            <ul className="space-y-3">
-              {["Inicio", "Nosotros", "Servicios", "Google Ads", "Paquetes", "Contacto"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase() === "inicio" ? "" : item.toLowerCase()}`}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200 flex items-center group"
-                  >
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    <span>{item}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+<div className="space-y-4">
+  <h3 className="text-gray-800 font-semibold text-lg mb-4">Enlaces rápidos</h3>
+  <ul className="space-y-3">
+    {[
+      { text: "Inicio", href: "" },
+      { text: "Nosotros", href: "about" },
+      { text: "Servicios", href: "services" },
+      { text: "Portafolio", href: "portfolio" },
+      { text: "Paquetes", href: "packages" },
+      { text: "Contacto", href: "contacto" }
+    ].map((item) => (
+      <li key={item.href || 'inicio'}>
+        <Link
+          href={`#${item.href}`}
+          className="text-gray-600 hover:text-blue-600 transition-colors duration-200 flex items-center group"
+        >
+          <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+          <span>{item.text}</span>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -102,11 +109,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-gray-600 text-sm">+52 (55) 1234 5678</span>
+              <a href="tel:5579627960"><span className="text-gray-600 text-sm">+52 (55) 7962 7960</span></a>  
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-gray-600 text-sm">contacto@deltaconsultora.com</span>
+               <a href="mailto:contacto@delta-digital.com.mx"><span className="text-gray-600 text-sm">contacto@delta-digital.com.mx</span></a> 
               </li>
             </ul>
           </div>
