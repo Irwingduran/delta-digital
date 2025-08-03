@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Facebook, Instagram, Menu, X, ChevronDown } from "lucide-react"
+import { Instagram, Menu, X, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
